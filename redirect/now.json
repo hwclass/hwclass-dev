@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "hwclass-dev-redirect",
+  "alias": ["www.hwclass.dev"],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": { "Location": "https://hwclass.dev/$1" }
+    }
+  ]
+}
