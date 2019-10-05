@@ -9,6 +9,12 @@ module.exports = {
       options: {
         trackingId: "UA-136789855-1"
       },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/content/posts/*`]
+      }
     }
   ],
   // Customize your site metadata:
