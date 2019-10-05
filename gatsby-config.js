@@ -61,6 +61,14 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: 'https://www.hwclass.dev',
+        sitemap: 'https://www.hwclass.dev/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/content/posts/*`]
