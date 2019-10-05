@@ -1,24 +1,6 @@
 module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-theme-blog`,
-      options: {},
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-136789855-1"
-      },
-    },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/content/posts/*`]
-      }
-    }
-  ],
-  // Customize your site metadata:
   siteMetadata: {
+    siteUrl: `https://www.hwclass.dev`,
     title: `hwclass.dev`,
     author: `Baris Guler`,
     description: `Personalized Generalizations: Baris Guler Personal Blog`,
@@ -33,4 +15,56 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {},
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-136789855-1"
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        // Exclude specific pages or groups of pages using glob parameters
+        // See: https://github.com/isaacs/minimatch
+        // The example below will exclude the single `path/to/page` and all routes beginning with `category`
+        exclude: [],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => {
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `daily`,
+              priority: 0.7,
+            }
+          })
+      }
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/content/posts/*`]
+      }
+    }
+  ]
 }
