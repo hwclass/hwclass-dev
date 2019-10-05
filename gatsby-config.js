@@ -21,6 +21,13 @@ module.exports = {
       options: {},
     },
     {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `green`,
+        showSpinner: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-136789855-1"
@@ -30,9 +37,6 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: `/sitemap.xml`,
-        // Exclude specific pages or groups of pages using glob parameters
-        // See: https://github.com/isaacs/minimatch
-        // The example below will exclude the single `path/to/page` and all routes beginning with `category`
         exclude: [],
         query: `
           {
