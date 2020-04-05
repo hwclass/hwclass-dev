@@ -15,15 +15,15 @@
     "deploy": "run-s deploy-staging deploy-site deploy-redirect"
   },
   "dependencies": {
-    "gatsby": "^2.15.28",
-    "gatsby-plugin-google-analytics": "^2.1.20",
-    "gatsby-plugin-nprogress": "^2.1.9",
-    "gatsby-plugin-offline": "^3.0.11",
+    "gatsby": "^2.20.12",
+    "gatsby-plugin-google-analytics": "^2.2.2",
+    "gatsby-plugin-nprogress": "^2.2.1",
+    "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sitemap": "^2.2.16",
-    "gatsby-theme-blog": "^1.0.2",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1"
+    "gatsby-plugin-sitemap": "^2.3.1",
+    "gatsby-theme-blog": "^1.4.13",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"

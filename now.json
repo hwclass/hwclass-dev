@@ -1,7 +1,6 @@
 {
   "version": 2,
   "regions": ["bru"],
-  "alias": ["hwclass.dev"],
   "builds": [
     {
       "src": "package.json",
