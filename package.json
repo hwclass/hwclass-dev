@@ -1,33 +1,28 @@
 {
-  "name": "hwclass-dev",
   "private": true,
-  "version": "0.0.1",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "vercel-build": "gatsby build",
-    "prod": "run-s build serve",
-    "deploy-redirect": "cd redirect && vercel && vercel --target production",
-    "deploy-staging": "vercel --target staging",
-    "deploy-site": "vercel && vercel --target production",
-    "deploy": "run-s deploy-staging deploy-site deploy-redirect",
-    "export": "node export.js"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc"
   },
   "dependencies": {
-    "gatsby": "^2.20.12",
-    "gatsby-plugin-google-analytics": "^2.2.2",
-    "gatsby-plugin-nprogress": "^2.2.1",
-    "gatsby-plugin-offline": "^3.1.2",
-    "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sitemap": "^2.3.1",
-    "gatsby-theme-blog": "^1.4.13",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "classnames": "^2.3.1",
+    "date-fns": "^2.28.0",
+    "gray-matter": "^4.0.3",
+    "next": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1",
+    "typescript": "^4.7.4"
   },
   "devDependencies": {
-    "medium-to-markdown": "0.0.3",
-    "npm-run-all": "^4.1.5"
+    "@types/node": "^18.0.3",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.4"
   }
 }
