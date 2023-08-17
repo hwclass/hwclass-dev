@@ -21,7 +21,7 @@ export default function Mentorship() {
               <CoverImage title={'asdasd'} src={'/assets/blog/mentorship/cover.png'} slug={'mentorship'} />
               {/* Image here */}
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
+            <div className="md:grid md:grid-cols-1 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
               <div>
                 <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
                   Empowering Engineers: Navigating Excellence Through Mentorship
@@ -71,7 +71,7 @@ export default function Mentorship() {
 
                   Warm regards and please feel free to reach me out over the following form below:<br/><br/>
 
-                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdftco7e7fzJaizB2B9Pv93DN6neRfO0I8gY9E2YVhojixyxA/viewform?embedded=true" width="640" height="2306" frameBorder="0" marginHeight={0} marginWidth={0}>Loading…</iframe>
+                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdftco7e7fzJaizB2B9Pv93DN6neRfO0I8gY9E2YVhojixyxA/viewform?embedded=true" width="100%" height="2306" frameBorder="0" marginHeight={0} marginWidth={0}>Loading…</iframe>
 
                 </div>
                 <Avatar name={'Baris Guler'} picture={'/assets/blog/authors/hwclass.png'} />
