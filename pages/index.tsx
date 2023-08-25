@@ -1,3 +1,5 @@
+import Script from 'next/script'
+
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
@@ -21,6 +23,16 @@ export default function Index({ allPosts }: Props) {
           <title>Baris Guler's Blog</title>
         </Head>
         <Container>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-1WLYQ509BD" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-1WLYQ509BD');
+          `}
+        </Script>
           <Intro />
           {heroPost && (
             <HeroPost
