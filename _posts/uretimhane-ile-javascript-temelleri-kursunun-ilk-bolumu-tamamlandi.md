@@ -10,7 +10,7 @@ ogImage:
   url: '/assets/blog/uretimhane-ile-javascript-temelleri-kursunun-ilk-bolumu-tamamlandi/cover.png'
 ---
 
-Sizlere harika bir haberim var ve bu heyecanlı haberi paylaşmak isterim! JavaScript Temelleri Eğitimi kursumuzun ilk bölümünü başarıyla tamamladık. Üretimhane’nin önderliğinde organize ettiğimiz JavaScript Eğitimi’nin bu bölümde JavaScript'in temel konularını ele aldık ve katılımcılarımızla bu dili daha yakından tanıma fırsatı bulduk. Benim için de oldukça keyifli ve heyecanlı olan bu ilk haftayı tamamlamamız üzerine sizlerle deneyimlerimi paylaşmak istedim.
+Sizlere harika bir haberim var ve bu heyecanlı haberi paylaşmak isterim! **[JavaScript Temelleri Eğitimi](https://uretimhane.com.tr/etkinlikler/javascript-egitimi/)** kursumuzun ilk bölümünü başarıyla tamamladık. Üretimhane’nin önderliğinde organize ettiğimiz JavaScript Eğitimi’nin bu bölümde JavaScript'in temel konularını ele aldık ve katılımcılarımızla bu dili daha yakından tanıma fırsatı bulduk. Benim için de oldukça keyifli ve heyecanlı olan bu ilk haftayı tamamlamamız üzerine sizlerle deneyimlerimi paylaşmak istedim.
 
 Eğitimin ilk gününde genel olarak JavaScript’in doğası, değişkenler, veri tipleri ve operatörlerle başlamış olduk. Kontrol akışlarından if ve switch komutlarına, fonksiyonlardan bağlam (context) kavramına, diziler ve nesnelerden efektif dizi yönetimi ve obje organizasyonuna kadar pek çok konuyu kapsayan bu bölüm, katılımcılarımızın JavaScript'i nasıl kullanacaklarını daha iyi anlamalarına yardımcı olduğunu düşünüyorum.
 
