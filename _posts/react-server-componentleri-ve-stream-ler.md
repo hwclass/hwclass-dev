@@ -12,31 +12,15 @@ ogImage:
 
 Bundan birkaç sene önce component’lerin cloud ortamından servis edilmesine dair bir [yazı](https://codeburst.io/aws-rendered-react-chocolate-chips-with-dawson-part-1-a-simple-service-for-serving-components-2b47a87bebab) üzerinden küçük bir deneme yapmıştım. Temelde lambda fonksiyonları halinde organize edilmiş UI component’lerinin hem bundle cost’unu minimuma çekerek render edebilmek, buradan da cloud’ta decouple edilmiş client işlem parçalarını HTML içeren string’ler olarak farklı uygulamalara embed edebilmekten bahsettiğim yazıda, o zamanlar yeni yeni serpilen IaC (infrastructure as code) aracı olan ve günümüzde [serverless](https://www.serverless.com/)’ın bir muadili olma niyetindeki [dawson](https://github.com/dawson-org) adlı bir library kullanmıştım. Böylece SSR yanında bedava gelen First Contentful Paint ve / veya Largest Contentful Paint gibi parametrelerin sürelerini azaltmak istemiştim.
 
-[
-
-AWS-rendered React chocolate chips with Dawson— Part 1: A simple service for serving components
------------------------------------------------------------------------------------------------
-
-### For a while, I’ve been searching for the alternative methods for having components or page fragments independently from…
-
-codeburst.io
-
-](https://codeburst.io/aws-rendered-react-chocolate-chips-with-dawson-part-1-a-simple-service-for-serving-components-2b47a87bebab)
+**[AWS-rendered React chocolate chips with Dawson— Part 1: A simple service for serving components](https://codeburst.io/aws-rendered-react-chocolate-chips-with-dawson-part-1-a-simple-service-for-serving-components-2b47a87bebab)**
 
 Haber uygulamalarındaki anlık widget’ları (dolar kuru, hava durumu, vb.) referans alarak biraz zaman harcamıştım. Aklımdakini tam olarak uygulamış olsam da, bu tür bir metodun client’taki state’in durumunu bozmadan, embed edilen uygulama içerisinde uyumlu şekilde run edilebilmesi işi için component’leri render ederken atanmış event’leri varsa onları korumak ve component’ler arası iletişim üzerine kafa yoramamıştım.
 
 Geçtiğimiz ay, React Server Components üzerine çalışıldığını farkettiğimde acaba ne yapılmak isteniyor diye çok merak ettim ve kod ile günümüz uygulamalarına nasıl entegre edilebileceğini biraz araştırdım. Tanıtım videosu ve demo ile [birkaç](https://ahmadawais.com/react-server-components/) blog [post](https://addyosmani.com/blog/react-server-components/)’ta yaptığım gezinti bana bazı konularda yeni şeyler öğrenmemin de kapısını aralamış oldum ve bunu paylaşmak istedim.
 
-![](https://miro.medium.com/max/1400/1*VoafdxQtOF7dfr1DjGyVKw.png)[https://twitter.com/reactjs/status/1341072021099327489](https://twitter.com/reactjs/status/1341072021099327489)[
+![](https://miro.medium.com/max/1400/1*VoafdxQtOF7dfr1DjGyVKw.png)[https://twitter.com/reactjs/status/1341072021099327489](https://twitter.com/reactjs/status/1341072021099327489)
 
-reactjs/rfcs
-------------
-
-### ⚠️ NOTE: We strongly recommend watching our talk introducing Server Components before reading this RFC. ⚠️ NOTE: We…
-
-github.com
-
-](https://github.com/reactjs/rfcs/blob/2b3ab544f46f74b9035d7768c143dc2efbacedb6/text/0000-server-components.md)
+[reactjs/rfcs](https://github.com/reactjs/rfcs/blob/2b3ab544f46f74b9035d7768c143dc2efbacedb6/text/0000-server-components.md)
 
 Attıkları [tweet](https://twitter.com/reactjs/status/1341072021099327489?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=notion%3A%2F%2Fwww.notion.so%2Fhwclass%2Fcf6b5186782045dc9afcd3732296a766%3Fv%3D410bfc5f8e28423489cb525625d66bac%26p%3D899285bed4f44d9299f9597f65bb85e7) ile duyurdukları [blog post](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html)’larında ve [RFC](https://github.com/reactjs/rfcs/blob/2b3ab544f46f74b9035d7768c143dc2efbacedb6/text/0000-server-components.md) üzerinden kabaca bir gözattığımda React component’lerini bir nevi sunucudan servis etmek üzerine kurulu bir stratejisi olduğu anlaşılıyordu. React kodunun sunucuda execute edilip içermek istenilen veri ile istemciye sunulması demek. Temelde ise çözmek istenen sorun, request waterfall problemi. Bunu da birbiri içerisine geçmiş component’lerin bir şekilde bağımlı oldukları veriyi waterfall sırasına client üzerinde sokmadan, client’a sunucundan ilgili React component’in veri ile birlikte HTML çıktısı halinde alabilmeyi amaçlıyor.
 
