@@ -12,7 +12,7 @@ ogImage:
 
 Sizlere heyecan verici bir güncelleme sunmaktan mutluluk duyuyorum arkadaşlar: **[JavaScript Temelleri Eğitimi](https://uretimhane.com.tr/etkinlikler/javascript-egitimi/)**'nun ikinci bölümünü başarıyla tamamladık! **[İlk bölümdeki](https://www.hwclass.dev/posts/uretimhane-ile-javascript-temelleri-kursunun-ikinci-bolumu-tamamlandi)** giriş niteliğindeki çalışmalarımızı takip eden bu bölümde, bilgisayar bilimlerinin temellerinden başlayarak JavaScript'in işleyişini ve önemli kavramlarını ayrıntılı bir şekilde ele aldık. Her zamanki gibi heyecanım devam ederken paylaşmanın verdiği hazla soru-cevaplı oturumlarımız son hızıyla devam ediyor.
 
-![](/assets/blog/uretimhane-ile-javascript-temelleri-kursunun-ilk-bolumu-tamamlandi/course.png)
+![](/assets/blog/uretimhane-ile-javascript-temelleri-kursunun-ikinci-bolumu-tamamlandi/course.png)
 
 Bu kursun ikinci bölümünde, bilgisayar bilimlerinin temellerinden başlayarak işe koyulduk. İşlem (Process), İş Parçacığı (Thread), Tek İş Parçacıklı (Single-threaded) ve Çok İş Parçacıklı (Multi-threaded)Ortamlar gibi konuları ele alarak JavaScript'in senkron ve asenkron programlamaya nasıl uyarlandığını inceledik. Ayrıca, JavaScript'i çalıştırmak için kullanılan V8 gibi engiler'ler üzerinden nasıl çalıştığını anlattık.
 
