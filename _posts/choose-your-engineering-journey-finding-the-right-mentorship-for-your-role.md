@@ -132,6 +132,8 @@ Are you leading a team of engineers or responsible for engineering decisions at 
 
 This path is your key to becoming an engineering visionary who shapes the future.
 
+![](/assets/blog/choose-your-engineering-journey-finding-the-right-mentorship-for-your-role/flow.png)
+
 ### ****Conclusion****
 
 Whichever path you choose, remember that your engineering journey is a canvas waiting to be painted with knowledge, skills, and achievements. Our mentorship program is here to provide you with the guidance and support you need to succeed.
