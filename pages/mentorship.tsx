@@ -18,7 +18,7 @@ export default function Mentorship() {
           <Intro />
           <section>
             <div className="mb-8 md:mb-16">
-              <CoverImage title={'asdasd'} src={'/assets/blog/mentorship/cover.png'} slug={'mentorship'} />
+              <CoverImage title={'asdasd'} src={'/assets/blog/mentorship/cover.png'} />
               {/* Image here */}
             </div>
             <div className="md:grid md:grid-cols-1 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
@@ -96,7 +96,7 @@ export default function Mentorship() {
 
                   <i><strong><h3>Elevate Your Skills to the Zenith of Engineering</h3></strong></i><br/>
 
-                  <strong>Ideal for:</strong><br/><br/><br/>
+                  <strong>Ideal for:</strong><br/><br/>
 
                   &#9745; Senior Software Engineers<br/><br/>
 
