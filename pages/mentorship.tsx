@@ -154,7 +154,7 @@ export default function Mentorship() {
 
                   🚀 Join me on this exciting journey, and together, we'll unlock your full engineering potential! To get started, please fill out the form below to begin our mentorship adventure! 🌟
 
-                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdftco7e7fzJaizB2B9Pv93DN6neRfO0I8gY9E2YVhojixyxA/viewform?embedded=true" width="640" height="2306" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdftco7e7fzJaizB2B9Pv93DN6neRfO0I8gY9E2YVhojixyxA/viewform?embedded=true" width="640" height="2306" frameBorder="0">Loading…</iframe>
                 </div>
                 <Avatar name={'Baris Guler'} picture={'/assets/blog/authors/hwclass.png'} />
               </div>
