@@ -204,7 +204,7 @@ start();
 
 [PostHog](https://posthog.com/feature-flags): Build-time feature flags.
 
-### Conclusion
+## **Conclusion**
 
 As a summary, feature toggles / flags are not as mainstream yet but better to keep eyes on as you will most probably need in a near future as the dynamics of business are increasing more in being more agile / temporary environments which keep changing. User feedback is something crucial for today’s software engineering, so you will most probably be using one of those solutions above.
 
