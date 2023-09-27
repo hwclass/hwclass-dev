@@ -1,6 +1,6 @@
 ---
 title: "Toogling Features for the Future: OpenFeature"
-excerpt: "Node.js'yi nasıl kuracağımızı, gerekli paketleri eklemek için npm (Node Package Manager) kullanmayı ve yerleşik HTTP paketi ile web sunucusunu nasıl çalıştıracağımızı öğrenerek işe başladık."
+excerpt: "And introducing OpenFeature, The Open Standard Supported by CNCF."
 coverImage: '/assets/blog/toogling-features-for-the-future-openfeature/cover.png'
 date: '2023-09-27T17:08:46.924Z'
 author:
@@ -16,7 +16,7 @@ Feature toggles, which have a history dating back to the 1970s, have seen a subs
 
 ## **Types of Feature Toggles**
 
-R**elease toggles, Experiment toggles** for A/B testing, **Ops toggles** to provide controls for operations / infrastructure details, and **Permissioning toggles** for letting users in different segments to see the features enabled etc. They’re sometimes called **Feature Flippler**, **Feature Switch**, **Feature Gates**, or **Conditional Feature** and etc.
+**Release toggles, Experiment toggles** for A/B testing, **Ops toggles** to provide controls for operations / infrastructure details, and **Permissioning toggles** for letting users in different segments to see the features enabled etc. They’re sometimes called **Feature Flippler**, **Feature Switch**, **Feature Gates**, or **Conditional Feature** and etc.
 
 ## **A General Architectural Overview of Feature Flagging System**
 
