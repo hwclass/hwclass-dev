@@ -28,6 +28,8 @@ Bu hafta, JavaScript Temelleri kursunun son derslerini tamamladık ve altı haft
 
 **Yüksek Seviye Fonksiyonlar (Higher Order Functions) ve Closure'lar:** Bu güçlü kavramları öğrendik ve kodumuzu daha etkili hale getirdik.
 
+![](/assets/blog/javascriptin-fonksiyonel-dogasi-ile-tanisma-saf-fonksiyonlar-fonksiyon-kompozisyonu-ve-fonksiyonel-kutuphaneler/private-scope.png)
+
 Ayrıca, **[Lodash](https://lodash.com/)** ve **[Ramda](https://ramdajs.com/)** gibi iki fonksiyonel kütüphane üzerinde çalışmalar yaptık. Bu kütüphaneler, kodunuzu daha verimli ve hızlı hale getirir.
 
 Bu altı haftalık serüveni tamamlamaktan büyük keyif aldım ve hem öğrenme hem de öğretme açısından büyük bir ilerleme kaydettiğimi hissediyorum. Bu deneyim, daha fazla öğrenme ve öğretme fırsatlarına açık olduğumun bir göstergesi. Öğrendiklerimizi paylaşmaktan ve bu teknik konuları keşfetmekten büyük mutluluk duyuyorum.
