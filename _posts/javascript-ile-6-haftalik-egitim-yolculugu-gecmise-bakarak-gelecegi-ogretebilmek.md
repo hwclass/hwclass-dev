@@ -1,5 +1,5 @@
 ---
-title: "Javascript ile 6 haftalık Eğitim Yolculuğu: Geçmişe bakarak Geleceği Öğretebilmek"
+title: "Javascript ile 6 haftalık Eğitim Yolculuğu: Geçmişe Bakarak Geleceği Öğretebilmek"
 excerpt: "Bu süre zarfında, katılımcılarımıza JavaScript dünyasını tanıtmaya çalıştım ve temel programlama kavramlarına da değinerek birlikte öğrendiğimiz bir süreci örmeye gayret gösterdim."
 coverImage: '/assets/blog/javascript-ile-6-haftalik-egitim-yolculugu-gecmise-bakarak-gelecegi-ogretebilmek/cover.png'
 date: '2023-10-03T17:08:46.924Z'
