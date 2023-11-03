@@ -1,6 +1,6 @@
 ---
 title: 'Revolutionizing News Delivery: Building Hearbitz with Google Cloud Platform and Cutting-Edge Technologies'
-excerpt: 'Web application code bundlers (Webpack, etc.) are used in almost all web applications we develop today. We owe this to the inability of browser engines to keep up with the advancements in ECMAScript so far.'
+excerpt: 'Hearbitz's architecture has evolved, incorporating Google Cloud Platform (GCP) alongside groundbreaking technologies like OpenAI, and a robust CMS, HyGraph. This journey has brought Hearbitz to life, reimagining the way we experience news.'
 coverImage: '/assets/blog/revolutionizing-news-delivery-building-hearbitz-with-google-cloud-platform-and-cutting-edge-technologies/cover.png'
 date: '2023-11-02'
 author:
