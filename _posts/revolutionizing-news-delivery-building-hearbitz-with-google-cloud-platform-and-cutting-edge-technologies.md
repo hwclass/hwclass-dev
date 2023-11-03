@@ -1,6 +1,6 @@
 ---
 title: 'Revolutionizing News Delivery: Building Hearbitz with Google Cloud Platform and Cutting-Edge Technologies'
-excerpt: 'Hearbitz's architecture has evolved, incorporating Google Cloud Platform (GCP) alongside groundbreaking technologies like OpenAI, and a robust CMS, HyGraph. This journey has brought Hearbitz to life, reimagining the way we experience news.'
+excerpt: "Hearbitz's architecture has evolved, incorporating Google Cloud Platform (GCP) alongside groundbreaking technologies like OpenAI, and a robust CMS, HyGraph. This journey has brought Hearbitz to life, reimagining the way we experience news."
 coverImage: '/assets/blog/revolutionizing-news-delivery-building-hearbitz-with-google-cloud-platform-and-cutting-edge-technologies/cover.png'
 date: '2023-11-02'
 author:
