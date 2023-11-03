@@ -20,6 +20,8 @@ In the ever-evolving landscape of news consumption, it's more crucial than ever 
 
 Hearbitz's architecture has evolved, incorporating Google Cloud Platform (GCP) alongside groundbreaking technologies like OpenAI, and a robust CMS, HyGraph. This journey has brought Hearbitz to life, reimagining the way we experience news.
 
+![](/assets/blog/revolutionizing-news-delivery-building-hearbitz-with-google-cloud-platform-and-cutting-edge-technologies/app.png)
+
 Now, let's take a deeper dive into the architecture and innovations that have breathed life into Hearbitz, including new additions to the tech stack: GCP Cloud Tasks and Cloud Run, enhancing the reliability and robustness of our content retrieval system.
 
 **Crafting the Magic: How Hearbitz (was/is) Working**
