@@ -8,11 +8,10 @@ const Intro = () => {
         Tech Lead, Engineering Manager, (wanna-be) Architect,<br/> the Mentor of his Mantees 🤩
       </h4>
       <h4 className="text-center italic md:text-left text-lg mt-5 md:pl-8">
-        Current: <a href="https://www.deliveryhero.com/" target="_blank">Delivery Hero</a><br/>
-        Past: <a href="https://www.blacklane.com/en/" target="_blank">Blacklane</a>
-        ,{' '}<a href="https://www.intel.com/content/www/us/en/homepage.html" target="_blank">Intel</a>
-        ,{' '}<a href="https://netas.com.tr/" target="_blank">Netaş</a>
-        ,{' '}Markafoni
+        <a href="https://www.deliveryhero.com/" target="_blank">Delivery Hero</a>,{' '}
+        <a href="https://www.blacklane.com/en/" target="_blank">Blacklane</a>,{' '}
+        <a href="https://www.intel.com/content/www/us/en/homepage.html" target="_blank">Intel</a>,{' '}
+        <a href="https://netas.com.tr/" target="_blank">Netaş</a>{' '}&{' '}Markafoni
       </h4>
       <></>
     </section>
