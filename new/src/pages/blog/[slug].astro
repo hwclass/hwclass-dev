@@ -1,0 +1,103 @@
+<!-- src/pages/blog/[slug].astro -->
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Generate static paths for all blog posts
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+// Get the post data from props
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <main class="container">
+    <article class="blog-post">
+      {post.data.image && (
+        <div class="featured-image">
+          <img src={post.data.image} alt={post.data.title} />
+        </div>
+      )}
+      
+      <header class="post-header">
+        <span class="category-tag">{post.data.category}</span>
+        <span class="read-time">{post.data.readTime}</span>
+        <h1>{post.data.title}</h1>
+        <time datetime={post.data.date.toISOString()}>
+          {post.data.date.toLocaleDateString()}
+        </time>
+      </header>
+
+      <div class="post-content">
+        <Content />
+      </div>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .featured-image {
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .post-header {
+    margin-bottom: 2rem;
+  }
+
+  .post-header h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  time {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+  }
+
+  .post-content {
+    line-height: 1.8;
+  }
+
+  .post-content :global(h2) {
+    margin: 2rem 0 1rem;
+  }
+
+  .post-content :global(p) {
+    margin-bottom: 1.5rem;
+  }
+
+  .post-content :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .post-content :global(pre) {
+    padding: 1rem;
+    border-radius: 4px;
+    background: var(--gray-100);
+    overflow-x: auto;
+  }
+</style>
