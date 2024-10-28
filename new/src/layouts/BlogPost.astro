@@ -1,0 +1,20 @@
+<!-- src/layouts/BlogPost.astro -->
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+---
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <article class="blog-post">
+    <header>
+      <h1>{frontmatter.title}</h1>
+      <time datetime={frontmatter.date}>
+        {new Date(frontmatter.date).toLocaleDateString()}
+      </time>
+    </header>
+    
+    <div class="content">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

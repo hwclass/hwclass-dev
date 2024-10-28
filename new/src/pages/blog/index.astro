@@ -1,0 +1,82 @@
+<!-- src/pages/blog/index.astro -->
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => 
+  new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+
+const categories = [
+  'All',
+  'WebAssembly',
+  'Generative AI',
+  'System Design',
+  'Javascript',
+  'Event-driven Architecture (EDA)'
+];
+---
+
+<BaseLayout title="Blog" description="Technical articles and thoughts">
+  <main class="container">
+    <section class="blog-header">
+      <span class="category-tag">Blog</span>
+      <h1>Describe what your blog is about</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <div class="blog-content">
+      <aside class="categories">
+        <h2>Blog categories</h2>
+        <ul>
+          {categories.map(category => (
+            <li class={category === 'All' ? 'active' : ''}>
+              {category}
+            </li>
+          ))}
+        </ul>
+      </aside>
+
+      <section class="blog-grid">
+        {sortedPosts.length > 0 && (
+          <article class="blog-card featured">
+            <div class="card-image">
+              <img 
+                src={sortedPosts[0].data.image || "https://via.placeholder.com/800x400"} 
+                alt={sortedPosts[0].data.title}
+              />
+            </div>
+            <div class="card-content">
+              <span class="category-tag">{sortedPosts[0].data.category}</span>
+              <span class="read-time">{sortedPosts[0].data.readTime || '5 min read'}</span>
+              <h3>{sortedPosts[0].data.title}</h3>
+              <p>{sortedPosts[0].data.description}</p>
+              <a href={`/blog/${sortedPosts[0].slug}`} class="read-more">Read more →</a>
+            </div>
+          </article>
+        )}
+
+        <div class="regular-posts">
+          {sortedPosts.slice(1).map(post => (
+            <article class="blog-card">
+              <div class="card-image">
+                <img 
+                  src={post.data.image || "https://via.placeholder.com/400x300"} 
+                  alt={post.data.title}
+                />
+              </div>
+              <div class="card-content">
+                <span class="category-tag">{post.data.category}</span>
+                <span class="read-time">{post.data.readTime || '5 min read'}</span>
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <a href={`/blog/${post.slug}`} class="read-more">Read more →</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
