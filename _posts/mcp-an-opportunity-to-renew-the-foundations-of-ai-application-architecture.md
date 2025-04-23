@@ -8,13 +8,14 @@ author:
   picture: '/assets/blog/authors/hwclass.png'
 ogImage:
   url: '/assets/blog/mcp-an-opportunity-to-renew-the-foundations-of-ai-application-architecture/cover.png'
+  credits: 'https://unsplash.com/@numericcitizen'
 ---
 
-## Introcution
+## Introduction
 
 The emergence of the Model Context Protocol (MCP) represents a transformative opportunity to rethink and renew the foundational architecture of AI applications. As AI systems evolve to become more context-aware and capable of real-time interaction with external data and services, MCP offers a standardized, flexible framework that enables seamless integration between large language models (LLMs) and diverse external tools and data sources.
 
-Basically, this article explores how embracing MCP can drive a paradigm shift in system design, advocating for event-driven communication, efficient streaming technologies, unified language stacks via WebAssembly, and innovative serverless container deployment models as I think it is valuable to also start rethinking about re-organise our architecture foundations.
+Basically, what I wanna explore within this article is how embracing MCP can drive a paradigm shift in system design, advocating for event-driven communication, efficient streaming technologies, unified language stacks via WebAssembly, and innovative serverless container deployment models as I think it is valuable to also start rethinking about re-organise our architecture foundations. But long story short, I have a number of contraversial idea on MCPs but still waiting the concept to gain some more traction which will encourage also people to standardize also the anti-patterns alongside the best practices. That was in the history of software development: API first exploded and even people were selling (I guess, they still...) selling the API endpoints based on a subscription or usage-based pricing which takes around 10 years to get established in the industry. Now we're talking about MCPs for just 1-2 months with a huge focus and even have platforms like **[mcp.run](https://www.mcp.run/)** and even a standardization approach protocol documented: **[Model Context Protocol](https://modelcontextprotocol.io/introduction)**.
 
 ### Moving Beyond REST: Embracing Event-Driven Architectures
 
@@ -53,9 +54,9 @@ So in the setup I've diagrammed,
 
 ### Choosing Server-Sent Events (SSE) Over WebSockets for Streaming
 
-For real-time data streaming from servers to clients, MCP architectures favor Server-Sent Events (SSE) over WebSockets. SSE provides a simpler, more energy-efficient, and resource-optimized solution for unidirectional streaming of updates such as live analytics, notifications, or status changes.
+For real-time data streaming from servers to clients, MCP architectures favor **[Server-Sent Events (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)** over WebSockets. SSE provides a simpler, more energy-efficient, and resource-optimized solution for unidirectional streaming of updates such as live analytics, notifications, or status changes.
 
-SSE operates over standard HTTP protocols, which makes it firewall- and proxy-friendly, easier to implement, and less demanding on server resources compared to WebSockets. It also includes built-in reconnection and event ID tracking, ensuring robust and continuous data delivery with minimal overhead. While WebSockets offer bidirectional communication suited for interactive applications, SSE's efficiency and simplicity make it ideal for MCP's streaming needs, especially when client-to-server communication is infrequent or non-critical.
+But SSEs are a bit differently operates over standard HTTP protocols, which makes it firewall- and proxy-friendly, easier to implement, and less demanding on server resources compared to WebSockets. It also includes built-in reconnection and event ID tracking, ensuring robust and continuous data delivery with minimal overhead. While WebSockets offer bidirectional communication suited for interactive applications, SSE's efficiency and simplicity make it ideal for MCP's streaming needs, especially when client-to-server communication is infrequent or non-critical. I am not even mentioning about how a 2-way communication can easily kill your mobile device's battery.
 
 **SSE vs WebSockets: Optimizing Streaming for MCP**
 
@@ -84,7 +85,7 @@ Another interesting example on the SSE over WebSockets topic is the hyper-mcp pr
     // ...
 ```
 
-As you may have noticed, once you run [`hyper-mcp`](https://github.com/tuananh/hyper-mcp) from your terminal, the MCP server redirects the request directly to the plugin to get the result by utilising the binary format of what WASM provides. So it should be crazy fast (hopefully - there is no 0 (zero) latency at all, right? :))
+As you may have noticed, once you run **[`hyper-mcp`](https://github.com/tuananh/hyper-mcp)** from your terminal, the MCP server redirects the request directly to the plugin to get the result by utilising the binary format of what WASM provides. So it should be crazy fast (hopefully - there is no 0 (zero) latency at all, right? :))
 
 As we've just jumped in into the world of WASM, let's continue wit it to discuss how it can be instrumentalise for helping getting faster context as possible...
 
@@ -110,7 +111,7 @@ double calculate(double a, double b, char op) {
 
 Alright, get tight. If you "deploy" (well, run) this (in)to a browser, it may provide a performance back in native-speed execution, like **~2 - 10ms**, I guess. Worth to tryout if you have time and let me know. So maybe we can build the next 0 (zero) worth SaaS with a distributed architecture diagram which would be never used / read at all :). 
 
-Jokes aside, for more, please go check the [mcp-wasm](https://github.com/beekmarks/mcp-wasm) project and I am pretty sure it will triggers more interesting ideas on your mind.
+Jokes aside, for more, please go check the **[mcp-wasm](https://github.com/beekmarks/mcp-wasm)** project and I am pretty sure it will triggers more interesting ideas on your mind.
 
 Another examples but from real life are like these:
 
@@ -119,15 +120,15 @@ Another examples but from real life are like these:
 
 And list goes on ...
 
-For more, just check [this source](https://blog.pixelfreestudio.com/how-to-use-webassembly-for-ai-and-data-science-on-the-web/), I am pretty sure you will like it a lot. Why, the reason basically WASM has the biggest potentiality in terms of providing pace, rather than sth. different by just converting any (code) source into a binary representation of that code and make it run natively with just 1 (but huge) addition: What you built will `run everywhere`. Like how Java was promising for back in the days: [Write once, run everywhere](https://en.wikipedia.org/wiki/Write_once,_run_anywhere).
+For more, just check **[this source](https://blog.pixelfreestudio.com/how-to-use-webassembly-for-ai-and-data-science-on-the-web/)**, I am pretty sure you will like it a lot. Why, the reason basically WASM has the biggest potentiality in terms of providing pace, rather than sth. different by just converting any (code) source into a binary representation of that code and make it run natively with just 1 (but huge) addition: What you built will `run everywhere`. Like how Java was promising for back in the days: **[Write once, run everywhere](https://en.wikipedia.org/wiki/Write_once,_run_anywhere)**.
 
 ### Innovating Deployment: Short-Living, On-Demand Serverless Containers
 
-Traditional deployment models rely heavily on either fully-fledged containers or serverless functions. However, MCP's dynamic and context-driven nature calls for a hybrid approach: short-living, on-demand serverless containers that combine the best of both worlds.
+Traditional deployment models rely heavily on either fully-fledged containers or serverless functions. However, MCP's dynamic and context-driven nature calls for a hybrid approach: short-living, on-demand serverless containers that combine the best of both worlds. I guess **[Fly Machines](https://fly.io/docs/machines/overview/)** by **[Fly.io](https://fly.io/)** us such a product, also just imagine you combine it with **[Unikernels](http://unikernel.org/)**, which only includes the application code and only host libraries / packages which is needed, that's it. I cannot imagine the latency and / performance aspect of this authentic configuration for having flying serverless(es).
 
-These lightweight containers spin up quickly to handle specific tasks or events triggered by MCP clients and shut down immediately after, optimizing resource usage and cost efficiency. Unlike long-running containers or purely function-based serverless models, this approach offers greater flexibility and control, supporting complex workloads while maintaining the scalability and low maintenance benefits of serverless computing. It also facilitates rapid iteration and deployment of MCP servers, critical for evolving AI applications.
+So these lightweight containers can spin up quickly to handle specific tasks or events triggered by MCP clients and shut down immediately after, optimizing resource usage and cost efficiency. Unlike long-running containers or purely function-based serverless models, this approach offers greater flexibility and control, supporting complex workloads while maintaining the scalability and low maintenance benefits of serverless computing. It also facilitates rapid iteration and deployment of MCP servers, critical for evolving AI applications.
 
-And everyone know this: Booting serverless code is faster than spinning up containers, I am still not sure how it would be more performant to spin up a on-deman function (as a serverless function) within a well-controlled container which will die once it does its job. So it is basically running `SIGINT` / `SIGTERM` [in the function](https://nodejs.org/api/process.html#signal-events) and run `docker compose down some-serverless-function-container` command, right?
+And everyone is aware of this: Booting serverless code is faster than spinning up containers, I am still not sure how it would be more performant to spin up a on-deman function (as a serverless function) within a well-controlled container which will die once it does its job. So it is basically running `SIGINT` / `SIGTERM` **[in the function](https://nodejs.org/api/process.html#signal-events)** and run `docker compose down some-serverless-function-container` command, right? As you can also see an example of this in wild world: How to **[delete a machine](https://fly.io/docs/machines/api/machines-resource/#delete-a-machine-permanently)** permanently with Machines API.
 
 ### Conclusion: Renewing Foundations for the AI Era
 
