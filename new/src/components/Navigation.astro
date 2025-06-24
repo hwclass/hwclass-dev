@@ -1,0 +1,96 @@
+<!-- src/components/Navigation.astro -->
+---
+const navItems = [
+  { label: 'About', href: '/about' },
+  { label: 'Courses', href: '/courses' },
+  { label: 'Mentorship', href: '/mentorship' },
+  { label: 'Consultancy', href: '/consultancy' },
+  { label: 'Insights', href: '/insights' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="/" class="logo">Logo</a>
+    <div class="nav-items">
+      <ul>
+        {navItems.map(item => (
+          <li>
+            <a 
+              href={item.href}
+              class={currentPath.includes(item.href) ? 'active' : ''}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a href="/contact" class="contact-button">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .main-nav {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .nav-items ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-items a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+
+  .nav-items a:hover {
+    color: #666;
+  }
+
+  .nav-items a.active {
+    color: #ff6b6b;
+  }
+
+  .contact-button {
+    background: #000;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  .contact-button:hover {
+    background: #333;
+  }
+
+  @media (max-width: 768px) {
+    .nav-items {
+      display: none;
+    }
+  }
+</style>
