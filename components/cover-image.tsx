@@ -6,9 +6,10 @@ type Props = {
   title: string
   src: string
   slug?: string
+  credits?: string
 }
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CoverImage = ({ title, src, slug, credits }: Props) => {
   const image = (
     <Image
       src={src}
@@ -28,6 +29,12 @@ const CoverImage = ({ title, src, slug }: Props) => {
         </Link>
       ) : (
         image
+      )}
+      {credits && (
+        <div 
+          className="text-sm text-gray-500 mt-2"
+          dangerouslySetInnerHTML={{ __html: credits }}
+        />
       )}
     </div>
   )
