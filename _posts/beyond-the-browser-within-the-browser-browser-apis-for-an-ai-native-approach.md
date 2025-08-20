@@ -9,7 +9,6 @@ author:
   picture: '/assets/blog/authors/hwclass.png'
 ogImage:
   url: '/assets/blog/beyond-the-browser-within-the-browser-browser-apis-for-an-ai-native-approach/cover.png'
-  credits: 'Photo by <a href="https://unsplash.com/@gasparzaldo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">gaspar zaldo</a> on <a href="https://unsplash.com/photos/snow-covered-mountain-near-body-of-water-during-daytime-W-z3dwoayFM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
 ---
 
 # Beyond the Browser: Exploring Potential AI Architectures
