@@ -16,16 +16,25 @@ WebAssembly (Wasm) has generated a lot of excitement, but also a fair share of m
 
 **Common Misconceptions About WebAssembly (and of course, there are more...):**
 
-- WebAssembly is a programming language (you can write your app directly in WebAssembly)
-- WebAssembly will completely replace JavaScript on the web.
-- WebAssembly only works in web browsers and nowhere else.
-- WebAssembly can directly access the DOM and Web APIs just like JavaScript.
-- Only C, C++, or Rust code can be compiled to WebAssembly (other languages aren’t supported).
-- WebAssembly guarantees better performance for all kinds of code.
-- Running WebAssembly in the browser is unsafe or introduces security risks.
-- WebAssembly modules are always tiny and add almost no file size overhead.
-- WebAssembly isn’t widely supported yet and isn’t ready for production use.
-- Using WebAssembly means you must rewrite your entire app in a different language.
+-- WebAssembly is a programming language (you can write your app directly in WebAssembly)
+
+-- WebAssembly will completely replace JavaScript on the web.
+
+-- WebAssembly only works in web browsers and nowhere else.
+
+-- WebAssembly can directly access the DOM and Web APIs just like JavaScript.
+
+-- Only C, C++, or Rust code can be compiled to WebAssembly (other languages aren’t supported).
+
+-- WebAssembly guarantees better performance for all kinds of code.
+
+-- Running WebAssembly in the browser is unsafe or introduces security risks.
+
+-- WebAssembly modules are always tiny and add almost no file size overhead.
+
+-- WebAssembly isn’t widely supported yet and isn’t ready for production use.
+
+-- Using WebAssembly means you must rewrite your entire app in a different language.
 
 Below, we tackle each assumption in turn, explaining why it’s misleading or outright false and highlighting the real facts about WebAssembly.
 
