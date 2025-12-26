@@ -1,0 +1,149 @@
+<!-- src/components/Footer.astro -->
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="main-footer">
+  <div class="footer-container">
+    <section class="newsletter-section">
+      <h2>SIGN UP FOR MY NEWSLETTER</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      
+      <form class="newsletter-form">
+        <div class="input-group">
+          <input 
+            type="email" 
+            placeholder="ENTER YOUR EMAIL" 
+            required
+          />
+          <button type="submit">VIEW ALL</button>
+        </div>
+        <p class="terms-text">
+          By clicking Sign Up you're confirming that you agree with our Terms and Conditions.
+        </p>
+      </form>
+    </section>
+
+    <div class="footer-bottom">
+      <div class="copyright">
+        © {currentYear}
+      </div>
+      <nav class="footer-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <button class="cookie-settings">Cookie Settings</button>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .main-footer {
+    margin-top: 4rem;
+    background: #fff;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .newsletter-section {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .newsletter-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+  }
+
+  .newsletter-form {
+    max-width: 500px;
+    margin: 2rem auto;
+  }
+
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .input-group input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+  }
+
+  .input-group button {
+    padding: 0.75rem 1.5rem;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .input-group button:hover {
+    background: #333;
+  }
+
+  .terms-text {
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #eee;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-links a,
+  .cookie-settings {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .cookie-settings {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+  }
+
+  .footer-links a:hover,
+  .cookie-settings:hover {
+    color: #000;
+  }
+
+  @media (max-width: 768px) {
+    .input-group {
+      flex-direction: column;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>
